@@ -1,0 +1,76 @@
+<h2>Player Data</h2>
+<hr />
+<form class="container" #f="ngForm">
+  <label for="name"><b>Name</b></label>
+  <input
+    type="text"
+    placeholder="Enter Name"
+    name="name"
+    [(ngModel)]="playerData.name"
+    minlength="4"
+    #name="ngModel"
+    required
+  />
+  <div
+    *ngIf="f.form.controls.name?.invalid && (f.form.controls.name?.dirty || f.form.controls.name?.touched)"
+  >
+    <small class="error">Please enter a valid Name</small>
+  </div>
+  <label for="team">
+    <b>Team</b>
+  </label>
+
+  <input
+    type="text"
+    placeholder="Enter Team Name"
+    name="team"
+    minlength="4"
+    [(ngModel)]="playerData.team"
+    #team="ngModel"
+    required
+  />
+  <div
+    *ngIf="f.form.controls.team?.invalid && (f.form.controls.team?.dirty || f.form.controls.team?.touched)"
+  >
+    <small class="error">Please enter a valid Team Name</small>
+  </div>
+
+  <label for="jersey_number">
+    <b>Jersey Number</b>
+  </label>
+  <input
+    type="text"
+    placeholder="Enter Jersey Name"
+    name="jersey_number"
+    [(ngModel)]="playerData.jersey_number"
+    pattern="^[0-9]*$"
+    #jersey_number="ngModel"
+    required
+  />
+
+  <div
+    *ngIf="f.form.controls.jersey_number?.invalid && (f.form.controls.jersey_number?.dirty || f.form.controls.jersey_number?.touched)"
+  >
+    <small class="error">Please enter a valid Jersey Number</small>
+  </div>
+
+  <label for="position"> <b>Position</b></label>
+  <input
+    type="text"
+    name="position"
+    placeholder="Enter Position"
+    [(ngModel)]="playerData.position"
+    required
+  />
+</form>
+<hr />
+<div class="dialog-footer">
+  <button class="btn btn-danger" (click)="cancel()">Cancel</button>
+  <button
+    class="btn btn-success m-left"
+    [disabled]="f.invalid"
+    (click)="submit()"
+  >
+    <i *ngIf="loading" class="fa fa-spinner fa-spin"></i> {{ buttonTxt}}
+  </button>
+</div>

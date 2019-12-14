@@ -1,0 +1,43 @@
+table {
+  width: 100%;
+  text-align: center !important;
+}
+
+.table-bordered td,
+.table-bordered th {
+  vertical-align: middle;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td,
+th {
+  width: 12%;
+}
+
+.mat-header-cell {
+  border-bottom-width: 2px;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+.pad {
+  padding: 10px 10px;
+}
+
+.table-font {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.display-4 {
+  font-size: 2.4rem;
+  padding-top: 10px;
+}

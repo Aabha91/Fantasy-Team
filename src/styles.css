@@ -1,0 +1,25 @@
+/* Import angular material CSS file */
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+.dialog-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.m-left {
+  margin-left: 15px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 7px;
+  margin: 4px 0 10px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.error {
+  color: red !important;
+}
