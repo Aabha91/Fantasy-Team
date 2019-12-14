@@ -20,3 +20,9 @@
 4. FontAwesome
 
 ## All players data : src/assets/players-data.json
+
+## Steps to run it locally:
+1) `git clone <this repository>`
+2) `npm install`
+3) `ng serve`
+4) open your browser and navigate to: http://localhost:4200/
